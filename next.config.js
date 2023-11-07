@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/gh-pages-test',
+  basePath: '/rdama-engineer',
 }
 
 module.exports = nextConfig
+
