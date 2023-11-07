@@ -1,4 +1,4 @@
-import { nextMDX } from '@next/mdx'
+import nextMDX from '@next/mdx'
 
 import { recmaPlugins } from './mdx/recma.mjs'
 import { rehypePlugins } from './mdx/rehype.mjs'
@@ -18,6 +18,9 @@ const nextConfig = {
   output: 'export',
   basePath: '/rdama-engineer',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+  images: {
+    unoptimized: true
+  }
 }
 
 export default withMDX(nextConfig)
