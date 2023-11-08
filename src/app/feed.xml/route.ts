@@ -4,14 +4,13 @@ import { Feed } from 'feed'
 
 export async function GET(req: Request) {
   let siteUrl = process.env.NEXT_PUBLIC_SITE_URL
-
   if (!siteUrl) {
     throw Error('Missing NEXT_PUBLIC_SITE_URL environment variable')
   }
 
   let author = {
-    name: 'Joe Davola',
-    email: 'crazy.joe@example.com',
+    name: 'Rakheen Dama',
+    email: 'rakheen.dama@binarymash.io',
   }
 
   let feed = new Feed({
@@ -28,6 +27,7 @@ export async function GET(req: Request) {
     },
   })
 
+  console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> " + req.headers);
   let html = await (await fetch(new URL('/', req.url))).text()
   let $ = cheerio.load(html)
 

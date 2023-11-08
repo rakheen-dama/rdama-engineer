@@ -15,12 +15,11 @@ const withMDX = nextMDX({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  basePath: '/rdama-engineer',
+  basePath: '',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   images: {
     unoptimized: true
-  }
+  },
 }
 
 export default withMDX(nextConfig)
